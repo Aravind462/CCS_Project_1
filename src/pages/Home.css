@@ -44,25 +44,11 @@
 .display-section{
     text-align: center;
     border: 1px solid black;
-    padding: 2rem;
+    padding: 4rem;
     height: max-content;
     font-size: large;
 }
 
 .display-section>p{
     padding: 0.5rem 0;
-}
-
-.edit-delete{
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.edit,.delete{
-    margin: 0 0.5rem;
-    width: 6rem;
-    padding: 0.5rem 1rem;
-    font-size: medium;
 }

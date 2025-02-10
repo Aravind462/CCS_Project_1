@@ -3,10 +3,12 @@
     grid-template-columns: repeat(4, 1fr);
     margin-top: 2rem;
     font-size: 1.3rem;
+    align-items: center;
 }
 
 .details>input{
     font-size: large;
+    padding: 1rem;
 }
 
 .buttons{
@@ -21,4 +23,5 @@
     margin: 0 1rem;
     font-size: 1rem;
     padding: 0.5rem;
+    width: 5rem;
 }
