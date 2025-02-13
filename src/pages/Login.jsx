@@ -21,7 +21,9 @@ const Login = () => {
         const result = await loginAPI(loginDetails);
         if(result.status === 200){
           console.log(result.data.token);
+          console.log(result.data.user);
           sessionStorage.setItem("token", result.data.token);
+          sessionStorage.setItem("user", JSON.stringify(result.data.user));
           navigate('/');
         }
       }catch(error){

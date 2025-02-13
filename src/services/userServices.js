@@ -8,3 +8,7 @@ export const signupAPI = async (signupDetails)=>{
 export const loginAPI = async (loginDetails)=>{
     return await axios.post(`${SERVER_BASE_URL}/login`, loginDetails);
 }
+
+export const addProfilePicAPI = async (file, reqHeader)=>{
+    return await axios.put(`${SERVER_BASE_URL}/profile/add-pic`, file, { headers: reqHeader });
+}

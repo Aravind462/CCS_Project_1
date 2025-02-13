@@ -19,7 +19,7 @@
 .search-display{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    margin-top: 3rem;
+    margin-top: 1rem;
     grid-gap: 1rem;
 }
 

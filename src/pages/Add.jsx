@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import './Add.css'
-import Header from '../components/Header';
 import { addPersonAPI } from '../services/personServices';
 import { useNavigate } from 'react-router-dom';
 
 const Add = () => {
   const [personDetails,setPersonDetails] = useState({
-    fullName: "", fathersName: "", dateOfBirth: "", weddingAnniverary: ""
+    fullName: "", fathersName: "", dateOfBirth: "", weddingAnniversary: ""
   });
   console.log(personDetails);
 
@@ -41,41 +40,38 @@ const Add = () => {
 
   const handleReset = ()=>{
     setPersonDetails({
-      fullName: "", fathersName: "", dateOfBirth: "", weddingAnniverary: ""
+      fullName: "", fathersName: "", dateOfBirth: "", weddingAnniversary: ""
     });
   }
 
   return (
-    <>
-      <Header/>
-      <div style={{margin:'5rem 3rem',fontSize:'1.5rem'}}>
-        <h1 style={{textAlign:'center'}}>Add New Person</h1>
-        <div className='details' style={{marginTop:'3rem'}}>
-          <div></div>
-          <label htmlFor="full-name">Full Name:</label>
-          <input value={personDetails.fullName} onChange={(e)=>setPersonDetails({...personDetails, fullName: e.target.value})} type="text" id='full-name' />
-        </div>
-        <div className='details'>
-          <div></div>
-          <label htmlFor="fathers-name">Father's Name:</label>
-          <input value={personDetails.fathersName} onChange={(e)=>setPersonDetails({...personDetails, fathersName: e.target.value})} type="text" id='fathers-name' />
-        </div>
-        <div className='details'>
-          <div></div>
-          <label htmlFor="dateofbirth">Date Of Birth:</label>
-          <input value={personDetails.dateOfBirth} onChange={(e)=>setPersonDetails({...personDetails, dateOfBirth: e.target.value})} type="date" id='dateofbirth' />
-        </div>
-        <div className='details'>
-          <div></div>
-          <label htmlFor="wedding-anniversary">Wedding Anniversary:</label>
-          <input value={personDetails.weddingAnniverary} onChange={(e)=>setPersonDetails({...personDetails, weddingAnniverary: e.target.value})} type="date" id='wedding-anniversary' />
-        </div>
-        <div className='buttons'>
-          <button style={{color:'green'}} onClick={handleSubmit}>Submit</button>
-          <button style={{color:'red'}} onClick={handleReset}>Reset</button>
-        </div>
+    <div style={{margin:'5rem 3rem',fontSize:'1.5rem'}}>
+      <h1 style={{textAlign:'center'}}>Add New Person</h1>
+      <div className='details' style={{marginTop:'3rem'}}>
+        <div></div>
+        <label htmlFor="full-name">Full Name:</label>
+        <input value={personDetails.fullName} onChange={(e)=>setPersonDetails({...personDetails, fullName: e.target.value})} type="text" id='full-name' />
       </div>
-    </>
+      <div className='details'>
+        <div></div>
+        <label htmlFor="fathers-name">Father's Name:</label>
+        <input value={personDetails.fathersName} onChange={(e)=>setPersonDetails({...personDetails, fathersName: e.target.value})} type="text" id='fathers-name' />
+      </div>
+      <div className='details'>
+        <div></div>
+        <label htmlFor="dateofbirth">Date Of Birth:</label>
+        <input value={personDetails.dateOfBirth} onChange={(e)=>setPersonDetails({...personDetails, dateOfBirth: e.target.value})} type="date" id='dateofbirth' />
+      </div>
+      <div className='details'>
+        <div></div>
+        <label htmlFor="wedding-anniversary">Wedding Anniversary:</label>
+        <input value={personDetails.weddingAnniversary} onChange={(e)=>setPersonDetails({...personDetails, weddingAnniversary: e.target.value})} type="date" id='wedding-anniversary' />
+      </div>
+      <div className='buttons'>
+        <button style={{color:'green'}} onClick={handleSubmit}>Submit</button>
+        <button style={{color:'red'}} onClick={handleReset}>Reset</button>
+      </div>
+    </div>
   )
 }
 

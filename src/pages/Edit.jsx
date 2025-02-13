@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './Add.css'
-import Header from '../components/Header';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { editPersonAPI, getOnePersonAPI } from '../services/personServices';
 
 const Edit = () => {
     const [personDetails,setPersonDetails] = useState({
-      fullName: "", fathersName: "", dateOfBirth: "", weddingAnniverary: ""
+      fullName: "", fathersName: "", dateOfBirth: "", weddingAnniversary: ""
     });
     console.log(personDetails);
 
@@ -26,8 +25,8 @@ const Edit = () => {
         try{
           const result = await getOnePersonAPI(id, reqHeader);
           if(result.status === 200){
-            const { fullName, fathersName, dateOfBirth, weddingAnniverary } = result.data;
-            setPersonDetails({fullName,fathersName,dateOfBirth,weddingAnniverary});
+            const { fullName, fathersName, dateOfBirth, weddingAnniversary } = result.data;
+            setPersonDetails({fullName,fathersName,dateOfBirth,weddingAnniversary});
           }
         }catch(error){
           alert("Error");
@@ -65,7 +64,6 @@ const Edit = () => {
 
   return (
     <>
-      <Header/>
       <div style={{margin:'5rem 3rem',fontSize:'1.5rem'}}>
         <h1 style={{textAlign:'center'}}>Edit Person</h1>
         <div className='details' style={{marginTop:'3rem'}}>
@@ -86,7 +84,7 @@ const Edit = () => {
         <div className='details'>
           <div></div>
           <label htmlFor="wedding-anniversary">Wedding Anniversary:</label>
-          <input value={personDetails.weddingAnniverary} onChange={(e)=>setPersonDetails({...personDetails, weddingAnniverary: e.target.value})} type="date" id='wedding-anniversary' />
+          <input value={personDetails.weddingAnniversary} onChange={(e)=>setPersonDetails({...personDetails, weddingAnniversary: e.target.value})} type="date" id='wedding-anniversary' />
         </div>
         <div className='buttons'>
           <button style={{color:'green'}} onClick={handleSubmit}>Submit</button>
