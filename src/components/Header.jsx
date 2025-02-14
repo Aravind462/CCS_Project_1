@@ -20,7 +20,7 @@ const Header = ({}) => {
                     :
                     <div style={{height:"4rem",display:"flex",alignItems:"center",justifyContent:"end",paddingRight:"3rem",backgroundColor:"lightblue"}}>
                         <Link style={{textDecoration:"none",padding:"0 1rem",color:"black",fontWeight:'600'}} to={'/login'}>LOGIN</Link>
-                        <Link style={{textDecoration:"none",padding:"0 1rem",color:"black",fontWeight:'600'}} to={'/login'}>SIGNUP</Link>
+                        <Link style={{textDecoration:"none",padding:"0 1rem",color:"black",fontWeight:'600'}} to={'/signup'}>SIGNUP</Link>
                     </div>
                 :
                 <></>
